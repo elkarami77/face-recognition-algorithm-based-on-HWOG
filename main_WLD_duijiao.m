@@ -1,19 +1,19 @@
 clc
 clear all
 close all hidden
-cNum=15;%类的总数
- load yale_data    %%5*5分块
- %load orl_data       %%3*3
+cNum=40;%类的总数
+ %load yale_data    %%5*5分块
+ load orl_data       %%3*3
 % load ar_light_data
  %load ar_expre_data         %ar人脸库共计50位男性，50为女性，每人26张，合计2600张
 %load ar_zhedang_A_data
 % load ar_zhedang_B_data
 % load caslight1_data
 % result1=zeros(13,13);
-fperc=11;%每类的人脸数
+fperc=10;%每类的人脸数
 % for a=1:5
-n=5;
-m=5;%分块数
+n=3;
+m=3;%分块数
 for m1=1;
     for  n1=1;
 xx=m*n;
@@ -29,8 +29,8 @@ for cN=1:cNum
         y1=[];
         y2=[];
         disp((cN-1)*fperc+fp)
-       base=yale_data{cN,fp};
-%         base=orl_data{cN,fp};
+     %  base=yale_data{cN,fp};
+         base=orl_data{cN,fp};
 %         base=ar_expre_data{cN,fp};
 %         base=ar_light_data{cN,fp};
 %         base=ar_zhedang_A_data{cN,fp};
